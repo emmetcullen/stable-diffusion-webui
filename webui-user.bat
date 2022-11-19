@@ -1,9 +1,10 @@
 @echo off
-
-set PYTHON=
+git pull
+pause
+set PYTHON="C:\Users\Emmet\AppData\Local\Programs\Python\Python310\python.exe"
 set GIT=
 set VENV_DIR=
-set COMMANDLINE_ARGS=
+set COMMANDLINE_ARGS=--precision full --no-half --lowvram --opt-split-attention
 set ACCELERATE=
 
 call webui.bat
