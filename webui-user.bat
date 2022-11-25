@@ -1,4 +1,4 @@
-git pull
+git pull https://github.com/MrCheeze/stable-diffusion-webui.git
 pause
 @echo off
 
