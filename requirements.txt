@@ -29,3 +29,7 @@ lark
 inflection
 GitPython
 torchsde
+<<<<<<< HEAD
+=======
+safetensors
+>>>>>>> 8504db51704d238cc7616f6bf59eb049d3eb101d

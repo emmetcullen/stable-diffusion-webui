@@ -21,7 +21,11 @@ class DeepDanbooru:
         files = modelloader.load_models(
             model_path=os.path.join(paths.models_path, "torch_deepdanbooru"),
             model_url='https://github.com/AUTOMATIC1111/TorchDeepDanbooru/releases/download/v1/model-resnet_custom_v3.pt',
+<<<<<<< HEAD
             ext_filter=".pt",
+=======
+            ext_filter=[".pt"],
+>>>>>>> 8504db51704d238cc7616f6bf59eb049d3eb101d
             download_name='model-resnet_custom_v3.pt',
         )
 
@@ -58,7 +62,11 @@ class DeepDanbooru:
         a = np.expand_dims(np.array(pic, dtype=np.float32), 0) / 255
 
         with torch.no_grad(), devices.autocast():
+<<<<<<< HEAD
             x = torch.from_numpy(a).cuda()
+=======
+            x = torch.from_numpy(a).to(devices.device)
+>>>>>>> 8504db51704d238cc7616f6bf59eb049d3eb101d
             y = self.model(x)[0].detach().cpu().numpy()
 
         probability_dict = {}
