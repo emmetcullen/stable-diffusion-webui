@@ -52,6 +52,8 @@ def enable_tf32():
     if torch.cuda.is_available():
         torch.backends.cuda.matmul.allow_tf32 = True
         torch.backends.cudnn.allow_tf32 = True
+        torch.backends.cudnn.benchmark = True
+        torch.backends.cudnn.enabled = True
 
 
 errors.run(enable_tf32, "Enabling TF32")
@@ -103,3 +105,5 @@ def mps_contiguous(input_tensor, device):
 
 def mps_contiguous_to(input_tensor, device):
     return mps_contiguous(input_tensor, device).to(device)
+
+
